@@ -1,5 +1,7 @@
-# linux-backup-automation
-This project demonstrates a real-world Linux backup automation solution using Bash scripting. It covers argument handling, tar-based compression, logging, and cron scheduling to perform reliable, automated directory backups — a common system administration and DevOps task.
+# Linux Backup Automation Script
+
+This project demonstrates automated directory backups using Bash scripting,
+tar compression, cron scheduling, and logging.
 
 ## Features
 - Date-based compressed backups
@@ -15,19 +17,39 @@ linux-backup-automation/
 ├── README.md
 ├── CRON.md
 
-## Usage
-
-### Make script executable
+## STEP 1: Create Project Directory
+mkdir linux-backup-automation
+cd linux-backup-automation
+touch backup.sh backup.log README.md CRON.md
 chmod +x backup.sh
 
-### Run manually
+## STEP 2: Final Bash Script (backup.sh)
+
+✅ This script includes
+arguments + tar + date-based naming + logging
+
+## Usage
+
+## STEP 3: Commands to Run Script (IN ORDER)
+
+1️⃣ Give permission (only once)
+chmod +x backup.sh
+
+2️⃣ Run manually
 ./backup.sh /home/abdullah
 
-### Check backups
+3️⃣ Verify backup
 ls /backup
 
-### Check logs
+4️⃣ Check logs
 cat backup.log
+
+📝 Example backup.log Output (TEXT – Jan 2, 2026)
+2026-01-02 10:15:01 SUCCESS: Backup completed for /home/abdullah -> /backup/backup-2026-01-02.tar.gz
+
+If error:
+
+2026-01-02 10:12:30 ERROR: Source directory does not exist: /home/invalid
 
 ## Cron Automation
 Edit crontab:
