@@ -1,0 +1,8 @@
+# Runtime logs
+backup.log
+
+# Backup archives
+*.tar.gz
+
+# OS files
+.DS_Store
