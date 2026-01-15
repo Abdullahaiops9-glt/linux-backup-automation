@@ -13,9 +13,9 @@ tar compression, cron scheduling, and logging.
 ## Project Structure
 linux-backup-automation/
 ├── backup.sh
-├── backup.log
 ├── README.md
 ├── CRON.md
+├── .gitignore
 
 ## STEP 1: Create Project Directory
 mkdir linux-backup-automation
@@ -57,6 +57,19 @@ crontab -e
 
 Example (daily at 1 AM):
 0 1 * * * /home/abdullah/linux-backup-automation/backup.sh /home/abdullah
+
+## Logging
+
+The script automatically creates a `backup.log` file in the project
+directory when executed.
+
+This log records:
+- Successful backups
+- Error messages
+- Execution timestamps
+
+The log file is generated at runtime and is intentionally excluded
+from version control.
 
 ## Concepts Covered
 - File system operations
